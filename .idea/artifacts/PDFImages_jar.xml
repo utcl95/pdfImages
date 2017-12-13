@@ -1,0 +1,58 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PDFImages:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PDFImages_jar</output-path>
+    <root id="archive" name="PDFImages.jar">
+      <element id="module-output" name="PDFImages" />
+      <element id="extracted-dir" path="C:/javalib/algs4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/derby.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/sac-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/poi-3.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jna-4.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/junit-4.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/opencsv-3.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/xalan-2.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/lept4j-1.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/tess4j-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/ghost4j-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/htmlunit-2.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-io-2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/httpcore-4.4.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/httpmime-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/itextpdf-5.5.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/xml-apis-1.4.01.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/cssparser-0.9.22.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/httpclient-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/pdfbox-app-2.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/rococoa-core-0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/serializer-2.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/slf4j-api-1.7.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/xmlworker-5.5.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-codec-1.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-lang3-3.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/hamcrest-core-1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/itext-pdfa-5.5.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/itext-xtra-5.5.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/xercesImpl-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/logback-core-1.1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/neko-htmlunit-2.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jul-to-slf4j-1.7.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/htmlunit-core-js-2.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/logback-classic-1.1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jai-imageio-core-1.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-beanutils-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/log4j-over-slf4j-1.7.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/xmlgraphics-commons-1.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jetty-io-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jetty-http-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jetty-util-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/jetty-client-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/websocket-api-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/websocket-client-9.4.3.v20170317.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/javalib/websocket-common-9.4.3.v20170317.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
