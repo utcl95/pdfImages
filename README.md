@@ -1,17 +1,5 @@
-Problema:
-- En el trabajo teniamos una lista Excel con miles de filas, data de resoluciones y separadas por hojas que eran los años de las resoluciones.
-- Teniamos cientos de archivos PDF, en cada archivo habia algunas docenas de documentos escaneados, las resoluciones.
-
-Trabajo:
-- Buscar una resolucion era buscar en el archivo Excel y luego buscar en el archivo PDF y luego imprimirlo.
-
-Desafio:
-- Crear una base de datos con el Excel, facil, exportar el excel y hacer algo de limpieza y formateo.
-- Separar los PDFs en resoluciones simples, he aqui que hice estas pequeñas funciones que me fueron muy utiles.
-
-Ejm.
 1. Archivo PDF: "R.D. N° 0764-0858.pdf"
-   El archivo tenia resoluciones de la 764 a la 858, el archivo podiar tener paginas en vertical y tambien en horizontal.
+   El archivo tiene resoluciones de la 764 a la 858, el archivo podiar tener paginas en vertical y tambien en horizontal.
 
 Funcion: splitPdfFile(String inPDF, String outPDF, int startPage, int endPage)
 
