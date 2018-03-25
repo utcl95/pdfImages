@@ -2,6 +2,14 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.*;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.parser.PdfReaderContentParser;
+import com.itextpdf.text.pdf.parser.SimpleTextExtractionStrategy;
+import com.itextpdf.text.pdf.parser.TextExtractionStrategy;
+
 import java.io.*;
 import java.util.List;
 
@@ -75,5 +83,20 @@ public class uPdfLib {
         out.flush();
         document.close();
         out.close();
+    }
+
+    String parsePdf(String pdf, Integer pages) throws IOException {
+        PdfReader reader = new PdfReader(pdf);
+        PdfReaderContentParser parser = new PdfReaderContentParser(reader);
+        TextExtractionStrategy strategy;
+
+        String texto = null;
+        for (int i = 1; i <= pages; i++) {
+            strategy = parser.processContent(i, new SimpleTextExtractionStrategy());
+            texto = strategy.getResultantText();
+        }
+        reader.close();
+        return texto;
+
     }
 }
