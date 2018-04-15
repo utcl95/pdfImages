@@ -43,7 +43,7 @@ public class DividirPDF {
                 int posFNum = texto.indexOf("-UGEL N");
                 String informe = texto.substring(posNum+17, posFNum+11);
 
-                String line0 = dni + "," + user + "," + fecha + "," + informe;
+                String line0 = dni + "\t" + user + "\t" + fecha + "\t" + informe + "\t" + line;
                 System.out.println(line0);
             }
             texto = null;
@@ -74,8 +74,7 @@ public class DividirPDF {
 
             pdf.splitPdfFile(inFile, outFile, begin, end);
         }
-
-    }
+}
 
     static void SampleReversePdfFile() throws IOException, DocumentException {
         String csvFile = "D:\\invertir.csv";
