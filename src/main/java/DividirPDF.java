@@ -15,41 +15,39 @@ public class DividirPDF {
     private static void showPdf(final File inputDirectory) throws IOException {
         File[] files =  inputDirectory.listFiles();
         if(files != null) {
-            return;
-        }
+            for (final File pdfFile : files) {
+                if (pdfFile.isDirectory()) {
+                    continue;
+                }
+                String pdfFilename = pdfFile.getAbsolutePath();
+                String texto = pdf.parsePdf(pdfFilename, 1);
 
-        for (final File pdfFile : files) {
-            if (pdfFile.isDirectory()) {
-                continue;
-            }
-            String pdfFilename = pdfFile.getAbsolutePath();
-            String texto = pdf.parsePdf(pdfFilename, 1);
+                // Generado por el Legix
+                if (texto.contains("Versión del Sistema:")) {
+                    // dni
+                    int posDni = texto.indexOf("D.N.I.:");
+                    String dni = texto.substring(posDni + 8, posDni + 16);
+                    // usuario
+                    int posUser = texto.indexOf("Usuario del Sistema:");
+                    int posFin = texto.indexOf("Pag. N");
+                    String user = texto.substring(posUser + 21, posFin - 1);
+                    // fecha y hora
+                    int posFecha = texto.indexOf("Fecha y Hora de Impresión:");
+                    int posFFin = texto.indexOf("Versión del Sistema:");
+                    String fecha = texto.substring(posFecha + 27, posFFin - 1);
+                    // Informe escalafonario
+                    int posNum = texto.indexOf("ESCALAFONARIO N");
+                    int posFNum = texto.indexOf("-UGEL N");
+                    String informe = texto.substring(posNum + 17, posFNum + 11);
+                    // Numero de hojas
+                    int posHojas = texto.indexOf("Pag. N");
+                    String hojas = texto.substring(posHojas);
+                    int posFHojas = hojas.indexOf(" de");
+                    String numHojas = hojas.substring(posFHojas + 3);
 
-            // Generado por el Legix
-            if(texto.contains("Versión del Sistema:")) {
-                // dni
-                int posDni = texto.indexOf("D.N.I.:");
-                String dni = texto.substring(posDni+8, posDni+16);
-                // usuario
-                int posUser = texto.indexOf("Usuario del Sistema:");
-                int posFin = texto.indexOf("Pag. N");
-                String user = texto.substring(posUser+21, posFin-1);
-                // fecha y hora
-                int posFecha = texto.indexOf("Fecha y Hora de Impresión:");
-                int posFFin = texto.indexOf("Versión del Sistema:");
-                String fecha = texto.substring(posFecha+27, posFFin-1);
-                // Informe escalafonario
-                int posNum = texto.indexOf("ESCALAFONARIO N");
-                int posFNum = texto.indexOf("-UGEL N");
-                String informe = texto.substring(posNum+17, posFNum+11);
-                // Numero de hojas
-                int posHojas = texto.indexOf("Pag. N");
-                String hojas = texto.substring(posHojas);
-                int posFHojas = hojas.indexOf(" de");
-                String numHojas = hojas.substring(posFHojas+3);
-
-                String line = dni + "\t" + user + "\t" + fecha + "\t" + informe + "\t" + numHojas;
-                System.out.println(line);
+                    String line = dni + "\t" + user + "\t" + fecha + "\t" + informe + "\t" + numHojas;
+                    System.out.println(line);
+                }
             }
         }
     }
