@@ -9,21 +9,21 @@ public class DividirPDF {
 
     public static void main(String[] args) throws IOException, DocumentException {
         System.setProperty("file.encoding", "UTF-8");
-        showPdf();
+        showPdf(new File("D:\\"));
     }
 
-    private static void showPdf() throws IOException {
-        String csvFile = "D:\\UGEL05\\_23032018\\repositorio\\listado.csv.txt";
+    private static void showPdf(final File inputDirectory) throws IOException {
+        File[] files =  inputDirectory.listFiles();
+        if(files != null) {
+            return;
+        }
 
-        String inputDirectory = "D:\\UGEL05\\_23032018\\repositorio\\";
-
-        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(csvFile), "8859_1"));
-
-        String line;
-
-        while ((line = in.readLine()) != null) {
-            String pdfFile = inputDirectory + line;
-            String texto = pdf.parsePdf(pdfFile, 1);
+        for (final File pdfFile : files) {
+            if (pdfFile.isDirectory()) {
+                continue;
+            }
+            String pdfFilename = pdfFile.getAbsolutePath();
+            String texto = pdf.parsePdf(pdfFilename, 1);
 
             // Generado por el Legix
             if(texto.contains("Versión del Sistema:")) {
@@ -42,19 +42,23 @@ public class DividirPDF {
                 int posNum = texto.indexOf("ESCALAFONARIO N");
                 int posFNum = texto.indexOf("-UGEL N");
                 String informe = texto.substring(posNum+17, posFNum+11);
+                // Numero de hojas
+                int posHojas = texto.indexOf("Pag. N");
+                String hojas = texto.substring(posHojas);
+                int posFHojas = hojas.indexOf(" de");
+                String numHojas = hojas.substring(posFHojas+3);
 
-                String line0 = dni + "\t" + user + "\t" + fecha + "\t" + informe + "\t" + line;
-                System.out.println(line0);
+                String line = dni + "\t" + user + "\t" + fecha + "\t" + informe + "\t" + numHojas;
+                System.out.println(line);
             }
-            texto = null;
         }
     }
 
     static void SampleSplitPdfFile() throws IOException, DocumentException {
-        String csvFile = "F:\\_20180316_\\2018\\2018.csv";
+        String csvFile = "d:\\r2018aaa.csv";
 
-        String inputDirectory = "F:\\_20180316_\\2018\\";
-        String outputDirectory = "F:\\_20180316_\\2018\\output\\";
+        String inputDirectory = "G:\\20180427\\faltan\\";
+        String outputDirectory = "G:\\20180427\\faltan\\output\\";
 
         CSVReader reader;
 
