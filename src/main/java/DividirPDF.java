@@ -16,10 +16,11 @@ public class DividirPDF {
         File[] files =  inputDirectory.listFiles();
         if(files != null) {
             for (final File pdfFile : files) {
-                if (pdfFile.isDirectory()) {
+
+                String pdfFilename = pdfFile.getAbsolutePath();
+                if (pdfFile.isDirectory() || (!pdfFilename.contains(".pdf")) ) {
                     continue;
                 }
-                String pdfFilename = pdfFile.getAbsolutePath();
                 String texto = pdf.parsePdf(pdfFilename, 1);
 
                 // Generado por el Legix
