@@ -9,10 +9,11 @@ public class DividirPDF {
 
     public static void main(String[] args) throws IOException, DocumentException {
         System.setProperty("file.encoding", "UTF-8");
-        showPdf(new File("D:\\"));
+        showPdf("D:\\");
     }
 
-    private static void showPdf(final File inputDirectory) throws IOException {
+    private static void showPdf(final String pathDirectory) throws IOException {
+        File inputDirectory = new File(pathDirectory);
         File[] files =  inputDirectory.listFiles();
         if(files != null) {
             for (final File pdfFile : files) {
