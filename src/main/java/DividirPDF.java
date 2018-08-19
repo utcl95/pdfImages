@@ -54,12 +54,7 @@ public class DividirPDF {
         }
     }
 
-    static void SampleSplitPdfFile() throws IOException, DocumentException {
-        String csvFile = "d:\\r2018aaa.csv";
-
-        String inputDirectory = "G:\\20180427\\faltan\\";
-        String outputDirectory = "G:\\20180427\\faltan\\output\\";
-
+    static void SampleSplitPdfFile(String csvFile, String inputDirectory, String outputDirectory) throws IOException, DocumentException {
         CSVReader reader;
 
         reader = new CSVReader(new FileReader(csvFile));
@@ -78,7 +73,7 @@ public class DividirPDF {
 
             pdf.splitPdfFile(inFile, outFile, begin, end);
         }
-}
+    }
 
     static void SampleReversePdfFile() throws IOException, DocumentException {
         String csvFile = "D:\\invertir.csv";
