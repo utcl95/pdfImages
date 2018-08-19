@@ -75,12 +75,7 @@ public class DividirPDF {
         }
     }
 
-    static void SampleReversePdfFile() throws IOException, DocumentException {
-        String csvFile = "D:\\invertir.csv";
-
-        String inputDirectory = "D:\\Resoluciones_pdf\\2013\\invertir\\";
-        String outputDirectory = "D:\\Resoluciones_pdf\\2013\\invertido\\";
-
+    static void SampleReversePdfFile(String csvFile, String inputDirectory, String outputDirectory) throws IOException, DocumentException {
         CSVReader reader;
 
         reader = new CSVReader(new FileReader(csvFile));
